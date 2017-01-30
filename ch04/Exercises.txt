@@ -1,0 +1,41 @@
+4.0 - Skipping because it just takes too much time!
+
+4.1 - Argument types to max must match exactly.  Will the following code work,
+and if not, how would you fix it?
+
+"""
+int maxlen;
+Student_info s;
+max(s.name.size(), maxlen);
+
+"""
+
+Types must be the same size, so cast one to the other.  In this case, csat int
+to std::string::size_type.
+
+4.2 - Write number and its square in two columns for numbers 0 - 99.
+A: See ex01.cpp
+
+4.3 - What happens if numbers go up to 1000?
+A: My first attempt actually didn't have an issue with this since I chose 10
+for the first setw() call.  Replacing this with the value 3 resulted in the
+columns colliding.  We can fix this by calculating the length of the largest
+number and then make sure setw() has at least that many values.
+
+4.4 - Change program to use doubles instead of ints.
+A: See ex03.cpp
+
+4.5 - Write a function that reads words from an input stream and stores them in
+a vector.  Use said function to write programs wich count the number of words in
+the input and how many times each occured.  See ex04.cpp
+
+4.6 - Skipping because it requires rewriting code snippets skipped in 4.0.
+
+4.7 - Write a program to calculate the average of numbers stored in a double.
+See ex05.cpp
+
+4.8 - If the following code is legal, what can we infer about the return value
+of f?
+double d = f()[n];
+
+A: returns a double.
