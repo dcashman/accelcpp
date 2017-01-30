@@ -1,0 +1,33 @@
+0.0 - Compile and run hello world program.  Copied to 0.cpp.
+
+0.1 - What does the following statement do?
+
+  3 + 4;
+
+A: It applies the '+' operator to its left and right sides, which in this case both have the integer type and would result in an integer value of 7.  This is part of a statement expression, though, and the result is discarded.
+
+0.2 - Write a program, that when run writes:
+
+  This (") is a quote, and this (\) is a backslash.
+
+A: see 2.cpp
+
+0.3 - Experiment with "\t" tab character.  Nothing to see here.
+
+0.4 - Write a program that, when run, writes the hello world program as output.  See 4.cpp
+
+0.5 - Is this a valid program, why or why not? (at this point I may stop writing the question)
+
+A: Not a valid program because the brackets are missing from the main() function definition.
+
+0.6 - Yes, this one is a valid program.  You can have an arbitrary number of nested parens and return statement is not needed for main func.
+
+0.7 - Not valid program.  You can't nest multiple-line comments since the first 'end comment' will grab the all open comment sections.
+
+0.8 - Yes: valid program.  Line comments take care of the multi-line comment issue.
+
+0.9 - Shortest valid program:  int main(){;}
+
+0.10 - Hello world but with newline everywhere whitespace is allowed.  See 10.cpp
+
+
