@@ -1,0 +1,60 @@
+1.0 - compile execute and test code in this chapter (see ex01.cpp and ex02.cpp)
+
+1.1 - Are the given definitions valid? Why?
+
+A: Yes, valid.  A string can be defined to be a string literal, or a sum of a
+string and a literal, but not two literals.  The string concatenation operator
+is left associative, so the second sum is not between two literals.
+
+1.2 - How about these other given defs?
+
+A: No, invalid.  This time the order is literal + literal + string, which
+results in a string literal plus string literal operation due to the
+left-associativity of the concatenation operant.
+
+1.3 - Is the given program valid?
+
+A: Yes, valid.  There are two definitions of a string variable 's', but both of those
+are within their own scope, with neither an ancestor of the other.
+
+1.4 - Is the given program valid?
+
+A: Yes, valid.  This program Now has one of the scopes as an ancestor of the
+second, which means that the double definition of 's' will cause viarable
+shadowing. Since c++ allows variable shadowing, this is fine.
+
+1.5 - Is this program valid? If so, what does it do, if not, rewrite to be valid.
+
+A: This program is invalid.  The variable 'x' is defined in a descendent scope
+and then used after that scope has ended.
+
+// Before:
+int main()
+{
+    {std::string s = "a string";
+        {std::string x = s + ", really";
+            std::cout << s << std::endl;}
+        std::cout << x << std::endl;
+    }
+    return 0;
+}
+
+// After - just have to make sure x is in scope when used.
+int main()
+{
+    {std::string s = "a string";
+        {std::string x = s + ", really";
+            std::cout << s << std::endl;
+        std::cout << x << std::endl;}
+    }
+    return 0;
+}
+
+1.6 - What does the given program do if two names are provided to the first
+prompt instead of one?  Predict and then try.
+
+Prediciton: std::cin will take both into its buffer and the first will be
+applied to the first variable with the second word given to the second variable
+so that the user will not be able to enter input a second time.
+
+Observed: prediction correct.
