@@ -1,0 +1,31 @@
+2.0 - Compile execute and test code in this chapter (see ex01.cpp).
+
+2.1 - Change program to remove separation in frame (see ex02.cpp).
+
+2.2 - Change program to use different padding on top 'n' bottom from sides.
+(see ex03.cpp).
+
+2.3 - Change program so that user may specify horizontal and vertical spacing
+(see ex04.cpp).
+
+2.4 - Change program so that the spaced between the borders and the greeting are
+written in chunks, rather than one character at a time (see ex05.cpp).
+
+2.5 - Write a set of '*' characters so that they create a rectangle, square and
+triangle (see ex06.cpp).
+
+2.6 - What does the code snippet do?
+A: prints out 0123456789
+
+2.7 - Write a program to count down from 10 to -5 (see ex07.cpp).
+
+2.8 - Write a program to calculate the product of numbers [1, 10) (see ex08.cpp)
+
+2.9 - Write a program which asks users to enter two numbers and says which is
+larger (see ex09.cpp)
+
+2.10 - Explain each of the uses of 'std' in the given snippet.
+A: The first one indicates that the 'std' namespace will be used, which
+means it will be searched for name resolution: meaning that 'std::' will not
+need to be prefixed to std library component calls.  The second two, however
+happen after the 'using' statement went out of scope, so its magic has worn off.
