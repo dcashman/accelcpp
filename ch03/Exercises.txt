@@ -1,0 +1,26 @@
+3.0 - Compile execute and test code in this chapter (see ex01.cpp).
+
+3.1 - Prove that all values must be kept to calculate the median when the total
+is unknown.
+A: Proof by contradiction.  In any set of N elements, sampling k of them results
+in N - k remaining. If a k is discarded and N can be arbitrarily large, it is
+possible to obtain another k - 1 elements such that k is precisely in between
+all elements, which requires it to be kept.
+
+3.2 Write a program to compute the quartiles of a set of integers (see ex02.cpp).
+This actually was supposed to be just "print set of integers by quarters, but I
+decided to do quartiles instead.  Oh well.
+
+3.3 Write a program to count the number of times each distinct word appears in
+its input (see ex03.cpp).
+
+3.4 Write a program to print the longest and shortest length of strings in input
+(see ex04.cpp).
+
+3.5 Write program to keep track of multiple student's grades, with one vec
+holding names and another final grades (see ex05.cpp).
+
+3.6 Write program so that it handles case of 0 hw assignments and report what
+divide by zero does (see ex06.cpp - which uses median pgm but with avg instead.
+
+A: Divide-by-zero results in nan result.
