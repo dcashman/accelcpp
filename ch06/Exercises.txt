@@ -1,0 +1,46 @@
+6.1 - Reimplement the frame and hcat operations from p93 and p94. See ex01.cpp.
+
+6.2 - Write a program to test the find_urls function.  See ex02.cpp
+
+6.3 - What does this program fragment do?
+
+    vector<int> u(10, 100);
+    vector<int> v;
+    copy(u.begin(), u.end(), v.begin());
+
+Prediction: segfault.  copy will try to increment and assign to the iterator in
+the third argument, which here will not correspond to any actual data since v
+has no elements. See ex03.cpp
+
+Result: As predicted.  Segfault.
+
+6.4 - Correct the program in 6.3 in two different ways.
+
+A: The the copy function needs to be given an iterator to which it can properly
+copy the elements.  We can do this using back_inserter on v, or by resizing v
+so that the iterator it yields has memory allocated.  See ex04.cpp
+
+6.5 - Write an analysis function to call optimistic_median.  See ex05.cpp
+
+6.6 - Merge the three analysis functions into one:
+
+A:
+
+double analysis(const vector<Student_info>& students,
+       double grade_aux(const Student_info&)) {
+    vector<double> grades;
+
+    transform(students.begin(), students.end(),
+              back_inserter(grades), grade_aux);
+    return median(grades);
+}
+
+6.7 - Rewrite extract fails in the mold of the did/didnt function for hw on p110.
+See ex06.cpp
+
+6.8 - Write a single function that can be used to classify students based on
+criteria of your choice.  I'm interpreting this to mean: write a general
+function for dividing students into two groups on some criteria similar to the
+above and the did/didnt on p110. See ex07.cpp
+
+6.9 - Use a library algorithm to concatenate all strings in a vector. See ex08.cpp
