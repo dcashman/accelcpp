@@ -13,21 +13,21 @@ Results (using time cmd):
 1000:   0m0.044s 0m0.022s
 10000:  0m2.037s 0m0.138s
 
-5.3 Use a typedef to write one version of the program that uses either vectors
+5.3 - Use a typedef to write one version of the program that uses either vectors
 or lists.  See ex03.cpp
 
-5.4 This program of driver functions (5.3) should differ only in the declaration
+5.4 - This program of driver functions (5.3) should differ only in the declaration
 of the type of the data structure holding the input.  Make sure this is the case.
 
 A: It is, except for the sort function, which isn't necessary for extracting
 failed students, but would require a macro or other change to properly adjust.
 
-5.5 Write a function named center(const vector<string>&) that returns a picture
+5.5 - Write a function named center(const vector<string>&) that returns a picture
 in which all the lines of the original picture are padded out to their full width,
 and with the padding evenly divided (as possible) between left and right sides.
 See ex04.cpp
 
-5.6 Rewrite extract_fails on p77 to copy all of the passing students to the
+5.6 - Rewrite extract_fails on p77 to copy all of the passing students to the
 front of the vector and then uses resize() to get rid of the old.  How does the
 performance change?  See ex05.cpp.
 
@@ -41,7 +41,7 @@ a higher frequency of failing grades (due to random selection and 60% of results
 failing), which made the original slower.  When the grading threshold was changed for
 the same sample set to 20%, the results were: ex05: 0m2.607s ex02: 0m0.234s.
 
-5.7 Given the frame implementation on p93, what would happen with:
+5.7 - Given the frame implementation on p93, what would happen with:
 vector<string> v;
 frame(v);
 
@@ -50,7 +50,7 @@ lines in-between and each would have 4 asterisks.  See ex06.cpp
 
 Actual: confirmed.
 
-5.8 In the hcat function from p95 what would happen if we defined s out of the
+5.8 - In the hcat function from p95 what would happen if we defined s out of the
 scope of the while?  See ex07.cpp
 
 Prediction: Depends on the input, if the left-hand side is longer than the right,
@@ -61,14 +61,14 @@ is made to create a string with a negative number of characters.
 
 Actual: confirmed.  Seg faults with left shorter, but fine w/left longer.
 
-5.9 Write program to write words in input that do not contain upper-case letters
+5.9 - Write program to write words in input that do not contain upper-case letters
 followed by those that do.
 
 This is basically the same as the "fails" example, but with a different grade()
 function.  See ex08.cpp
 
-5.10 Write a program to find all the palindromes in a dictionary, then find the
+5.10 - Write a program to find all the palindromes in a dictionary, then find the
 longest one.  See ex09.cpp
 
-5.11 Write a program to determine whether a word has any anscenders or descenders
+5.11 - Write a program to determine whether a word has any anscenders or descenders
 and extend it to find the longest one without either.  See ex10.cpp
