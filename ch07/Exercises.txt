@@ -1,0 +1,29 @@
+7.1 - Change program on p124 to sort output based on word count.
+A: Use another associative container for each count. See ex01.cpp
+
+7.2 - Extend the program on p64 to output how many students get each grade from
+A - F. A: 90-100, B: 80- 89.99, etc.  See ex02.cpp
+
+7.3 - Change the cross-reference program on p126 so that line numbers are not
+reported multiple times for a given word.  See ex03.cpp
+
+7.4 - The output of the cross-reference program will be ungainly if the input
+file is large.  Rewrite it to break up the output in this case.  I'm taking this
+to  mean don't have really long lines w/out carriage return. See ex04.cpp
+
+7.5 - Reimplement the grammar program using a list as the data structure in which
+the sentence is built.  See ex05.cpp
+
+7.6 - Reimplement gen_sentence without recursion, but instead using two vectors:
+one to hold the unwound\, generated sentence, and the other to hold the rules as
+a stack.  See ex06.cpp
+
+7.7 - Change the driver for the cross-reference program so that it writes line
+if there is only one line and lines otherwise.  See ex07.cpp
+
+7.8 - Change the cross-reference program to find all the URLs in a file, and
+write all the lines on which each distinct URL occurs.  See ex08.cpp
+
+7.9 - (difficult) The implementation of nrand will not work for arguments
+greater than RAND_MAX.  Reimplement so that it works well for all values of n.
+See ex09.cpp - but would use RAND_MAX instead of rmax.
