@@ -1,0 +1,60 @@
+8.1 - The analysis functions written in 110 share the same behavior but differ
+only in the function called to calculate the final grade.  Write a template
+function, parameterized by the type of the grading function, and use that to
+evaluate the grading schemes.  See ex01.cpp
+
+8.2 - Implement the following iterator functions (described on p121) and
+describe which class each iterator is:
+equal(b, e, b2)
+search(b, e, b2, e2)
+find(b, e, t)
+find_if(b, e, p)
+copy(b, e, d)
+remove_copy(b, e, d, t)
+remove_copy_if(b, e, d, p)
+remove(b, e, t)
+transform(b, e, d, f)
+partition(b, e, p)
+accumulate(b, e, t)
+
+See ex02.cpp
+
+8.3 - Change median function on p141 to not pass vector by value and use
+iterators instead.  How does this affect performance?  See ex03.cpp
+
+8.4 - Implement swap from p148.  Why didn't we operate on iterators directly?
+A:
+template <class T>
+void swap(T& x, T& y) {
+     T tmp = x;
+     x = y;
+     y = x;
+}
+
+This was done in my solution to 8.2 for the partition() portion.  Doing it as
+a function allows the compiler to deal with types, whereas I cheated and used
+'auto' a C++11 feature to have it do it for me in-funciton.  Otherwise this
+would require other shenanigans like the ones I used in 8.3 to get the iterator
+value_type from iterator_traits.
+
+8.5 - Reimplement xref to use output iterators and test using stdout and map.  See
+ex04.cpp
+
+8.6 - Suppose that m has type map<int, string> and that we encounter a call to
+copy(m.begin(), m.end(), back_inserter(x)).  What do we know about x?  What if the
+call were copy(x.begin(), x.end(), back_inserter(m)) instead?
+
+A: First case: x is an output iterator that supports sequential writes.  Second:
+wouldn't be able to do it, since maps are associative containers and don't support
+sequential output iterator insertion, specifically it lacks a push_back() method.
+More: http://www.cplusplus.com/reference/iterator/back_inserter/
+
+8.7 - Why doesn't the max funciton use two template params, one for each arg type?
+A: Because the values compared are expected to be the same.  More specifically,
+there would not be an easy way to determine which of the two types should be the
+return type.
+
+8.8 - In the binary search implementation, why did we do:
+begin + (end - begin)/2 instead of (begin + end)/2?
+A:  See http://en.cppreference.com/w/cpp/concept/RandomAccessIterator
+Adding two iterators is not supported, just adding a difference_type.
