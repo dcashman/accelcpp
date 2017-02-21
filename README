@@ -1,3 +1,9 @@
 This is my attempt to actually learn C++ properly by reading Accelerated C++ AND
 forcing myself to do the exercises.  The answers are/will-be mostly included
-here, with each chapter getting its own directory.
+here, with each chapter getting its own directory, with odd-numbered exercises
+given preference in the event of time crunch.  Also, due to an unfortunate
+decision when doing this the first time, the code files, e.g. ex03.cpp do not
+necessarily correspond to exercise N.3 for the given chapter, but just signify
+that this is the "third" code exercise for this block.  See the Exercises.txt
+file in each directory to determine which exercises correspond to which cpp
+files.
