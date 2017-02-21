@@ -1,0 +1,39 @@
+9.1 - Reimplement the STudent_info class so that it calculates the final grade
+when reading the structure and stores it in the object.  Change the grade
+function so that it uses this stored value.  See ex01.cpp
+
+9.2 - If we define name function as a plain, nonconst function, which others
+must also change? Why?
+
+A: Any functions calling it with const parameters will no longer be able to
+since it no longer guarantees that the student_info object won't be changed.
+
+9.3 - Write a program that catches the grade() exception, and one that doesn't.
+
+A: This actually was resolved in 9.1 by relying on the final_grade value in the
+grade() function. Now the error will only be encountered by private Student_info
+code.  Otherwise to do this, we would have created a new Student_info object,
+then called s.grade(), both in a try/catch and without.
+
+9.4 - Correct 9.3 using valid() function.
+
+A: Again, not going to implement because a non-issue, otherwise would have had
+the caller do a if (s.valid())  block before calling grade().
+
+9.5 - Write a class and associated functions to generate grades for students who
+take the course for pass/fail credit.  Passing is 60+ and only midterm and final
+count.  Write a program to print out students in alphabetical order with P/F.
+See ex02.cpp
+
+A: Writing a new class seems overkill.  Just extending Student_info.
+
+9.6 - Sort output in 9.5 so that it lists P grades before F grades. See ex02.cpp
+
+9.7 - The read_hw function solves a general problem, but suppose instead of
+making it general, we wanted to integrate it tightly with our code, how could
+we hide it?  See ex01.cpp.
+
+A: Could make it a private method, or could do what I already did in ex01.cpp
+and make the function static so that it is only visible to that file, since the
+new interface is to just call Student_info::grade().  Could also put it in an
+unnamed namespace (same effect as static).
