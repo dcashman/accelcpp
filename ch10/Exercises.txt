@@ -1,0 +1,11 @@
+10.1 - Rewrite student grading program to generate letter grades.  See ex01.cpp
+
+10.2 - Rewrite the median function to allow arrays or vectors for input.  Should
+work with any aritmetic container type.  See ex02.cpp
+
+10.3 - Write a test program to verify the function in 10.2  (Again see ex02.cpp).
+
+10.4 - 10.6 - TODO Write list class for strings. See ex03.cpp  Incomplete.  Need to
+figure out the best way to assign to elements via iterator, e.g. *i = new_value.
+Currently this doesn't work.  Could instead just use pointer instead of custom
+iterator class, but moving on for now.
