@@ -1,0 +1,38 @@
+11.1 - Why didn't Student_info class from ch09 have the "rule of three" methods?
+
+A: The default copy, assignment and destructor methods are to recursively call those
+methods on the class members.  Student_info only used primitives along with a string
+and a vector, all of which default to the right behavior.
+
+11.2 - Why did it define a default constructor, though?
+
+A: A default constructor needed to be defined because the compiler will only auto-
+generate one if there are no constructors defined.  Since Student_info needed
+multiple constructors, the default one had to be specified.
+
+11.3 - What does the synthesized assignment operator for Student_info objects do?
+
+A: calls the assignment operators for the string and vector arguments (freeing their
+memory and replacing) while just assignig new values to the double members.
+
+11.4 - How many members does the synthesized Student_info destructor destroy?
+
+A: Two: the string and the vector, the rest are primitives.
+
+11.5 Instrument the Student_info class to count how often objects are created,
+copied, assigned and destroyed.  Run the grading program and compare the
+different algorithms.  See ex01.cpp for example.  Can be expanded for all
+previous programs that used Student_info structs.
+
+11.6 - Add an operation to remove an element from a Vec and another to empty the
+entire Vec.  See ex02.cpp
+
+11.7 - Rewrite previous program to use the new Vec instead of vector.  See ex02.cpp
+
+11.8 - Write a simplified version of list.  See ch10 10.4 - 10.6, but w/template
+instead of string.
+
+11.9 - Estimate efficiency of grow() doubling each time more is needed, then analyze.
+
+A: meh.  Seems like a good heuristic solution.  Feels natural to comp sci types. Not
+going to do much more here.
