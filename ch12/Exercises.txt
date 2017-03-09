@@ -1,0 +1,27 @@
+Doing every third exercise because time is tight and 15 is waaay too many.
+
+12.1 - Reimplement the Str class, but choose an implementation strategy that
+requires that the class manage the storage itself, e.g. array of chars + length.
+See ex01.cpp
+
+12.4 - Define the equality and inequality operators for Str.  See ex01.cpp
+
+12.7 - The standard string class provides random-access iterators to manipulate
+the characters.  Add begin() and end() to the class.  Already done as part of
+12.1 (see Str.h).
+
+12.10 - Add a constuctor to Vec that takes two iterators.
+
+A: Just means adding the following line:
+template <class T> Vec<T>::Vec(iterator b, iterator e) { create(b, e); }
+
+12.15 - Provide an assign function which could assign values from an array
+into a vec.
+
+A: pointers are iterators, so just use the previously defined constructor,
+since we don't need to keep around old state:
+
+uncreate();
+create(arr, arr + arr_len);
+
+
